@@ -7,6 +7,10 @@
 
 # hass-opnsense
 
+
+***EXPERIMENTAL***
+
+
 Join `OPNsense` with `Home Assistant`!
 
 `hass-opnsense` uses the built-in `xmlrpc` service (along with [the REST API](https://docs.opnsense.org/development/api.html)) of `OPNsense` for all

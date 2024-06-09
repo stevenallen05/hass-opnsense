@@ -1,6 +1,7 @@
 """Config flow for OPNsense integration."""
 
 import logging
+import traceback
 from urllib.parse import quote_plus, urlparse
 import xmlrpc
 
@@ -147,6 +148,7 @@ class ConfigFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
                     f"Unexpected {err=}, {type(err)=}", [username, password]
                 )
                 _LOGGER.error(message)
+                _LOGGER.error(f"{message}\n{traceback.format_exc()}")
                 errors["base"] = "unknown"
 
         if not user_input:
